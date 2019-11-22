@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap;
+*{margin:o;padding:0;outline:none}
+body{font-family:'Open Sans',sans-serif}
+a{cursor:pointer}
+header{max-width:1320px;width:100%;margin:auto;padding:20px 15px;position:absolute;z-index:1;left:0;right:0;display:grid;grid-template-columns:1fr 2fr}
+.top-right{color:#fff;font-size:14px;display:grid;grid-template-columns:65% 25% 10%;text-align:right;align-items:center}
+.top-right a{color:#fff}
+.sign-in{padding:0 0 0 10px}
+.phone,.menu{font-size:22px}
+.phone i,.search i{padding:0 10px 0 0}
+.search{position:relative}
+.search i{cursor:pointer}
+.search-input{width:310px;max-width:0;padding:5px 15px;transition:all .5s ease;position:absolute;top:-10px;box-sizing:border-box;opacity:0;left:25px}
+.search-input.expanded{max-width:310px;opacity:1}
+#banner{background:#fff url(../images/banner.jpg) center top no-repeat;background-size:cover;width:100%;height:100vh;display:grid;align-items:center}
+.banner-h1{color:#fff;font-weight:300}
+#sidebar{width:300px;position:fixed;top:0;right:-300px;height:100vh;z-index:999;background:#d21812;color:#fff;transition:all .3s;overflow-y:scroll;box-shadow:3px 3px 3px rgba(0,0,0,0.2)}
+#sidebar.active{right:0}
+#dismiss{width:35px;height:35px;line-height:35px;text-align:center;background:#A21010;position:absolute;top:15px;left:10px;cursor:pointer;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;color:#fff}
+#dismiss:hover{background:#fff;color:#7386D5}
+.overlay{display:none;position:fixed;width:100vw;height:100vh;background:rgba(0,0,0,0.7);z-index:998;opacity:0;transition:all .5s ease-in-out}
+.overlay.active{display:block;opacity:1}
+#sidebar .sidebar-header{padding:20px;background:#6d7fcc}
+#sidebar ul.components{padding:70px 0;border-top:1px solid #47748b}
+#sidebar ul p{color:#fff;padding:10px}
+#sidebar ul li a{padding:10px;font-size:1.1em;display:block;color:#fff}
+#sidebar ul li a:hover{color:#d21812;background:#fff;text-decoration:none}
+#sidebar ul li.active>a,a[aria-expanded="true"]{color:#d21812;background:#fff}
+a[data-toggle="collapse"]{position:relative}
+.dropdown-toggle::after{display:block;position:absolute;top:50%;right:20px;transform:translateY(-50%)}
+ul ul a{font-size:.9em!important;padding-left:30px!important;background:#6d7fcc}
+#quote,#client-say,#about,#footer-top{padding:15px 0;background-color:rgba(239,239,239,.8)}
+.container-small{max-width:1045px;width:100%;margin:auto}
+#quote .container{display:grid;grid-template-columns:2fr 2fr 1fr 1fr;grid-column-gap:2px;align-items:stretch}
+.request-quotes input[type="button"]{background-color:#d21812;color:#fff;border-radius:0;width:100%;height:100%}
+.moving-from{background-color:#fff;padding:10px 15px}
+.select-box{-moz-appearance:none;-webkit-appearance:none;-o-appearance:none;background:url(../images/select-box.jpg) no-repeat scroll 96% center;display:block;text-indent:.01px;transition:border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0;border-radius:0;width:100%;white-space:nowrap;-webkit-white-space:nowrap;-o-white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-text-overflow:ellipsis;-o-text-overflow:ellipsis;padding:0 50px 0 0;border:none;color:#8a8b8a;font-size:15px;position:relative}
+#services,#our-blog,#faq,#about,#moving-guidence{padding:70px 0}
+#services .container-small{padding:0 15px}
+.services-ul{justify-content:center;text-align:center}
+.services-ul li{position:relative;display:inline-block;margin:0 0 8px}
+.services-ul li span{font-weight:700;font-size:13px;text-transform:uppercase;position:absolute;bottom:15px;z-index:1;left:10px;color:#d21812}
+.services-ul li:hover{box-shadow:1px 1px 10px 1px #ccc}
+#client-say{padding:40px 0}
+.client-h3{font-weight:300;color:#000;margin:0 0 40px}
+.carousel.slide{padding:0 0 60px}
+.quote-box{background-color:#fff;padding:25px;border:1px solid #d21812;position:relative;margin-bottom:20px}
+.quote-box:after,.quote-box:before{top:100%;left:15%;border-bottom:solid transparent;border-top:solid transparent;border-right:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+.quote-box:after{border-color:rgba(210,24,18,0);border-top-color:#fff;border-width:13px;margin-left:-10px}
+.quote-box:before{border-color:rgba(210,24,18,0);border-top-color:#d21812;border-width:15px;margin-left:-11px}
+.quote-box h6{font-weight:700;text-transform:uppercase;font-size:14px;padding:12px 0 5px}
+.quote-box p{font-size:14px;line-height:24px;color:#777;margin:0}
+.carousel-indicators li{background-color:#d21812}
+.carousel-indicators{bottom:-20px}
+.grid-box{display:grid;grid-column-gap:20px;grid-template-columns:1fr 2fr;margin-bottom:30px}
+.blog-img img{width:100%;max-width:300px}
+.blog-des h6{color:#d21812;font-size:14px}
+.blog-des p a{color:#212529}
+#packers-movers{background-color:#2f2f2f;width:100%;position:relative;height:610px}
+#packers-movers .width-50{max-width:50%;padding-right:7rem}
+.packers-movers-left{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:flex-start;max-width:1110px;margin:auto}
+.packers-movers-right{position:absolute;right:0;background:url(../images/packers-movers.jpg) center center no-repeat;width:50%;height:610px;background-size:cover}
+.client-h3.white-color{color:#fff}
+p.light-white-color{color:#b6b6b6}
+.sprite{background-image:url(../images/sprites.png);background-repeat:no-repeat;display:inline-block}
+.sprite-icons-1{width:46px;height:45px;background-position:0 0}
+.sprite-icons-2{width:46px;height:45px;background-position:0 -52px}
+.sprite-icons-3{width:46px;height:45px;background-position:0 -100px}
+.sprite-icons-4{width:46px;height:45px;background-position:0 -150px}
+.sprite-icons-5{width:46px;height:45px;background-position:0 -200px}
+.sprite-icons-6{width:46px;height:45px;background-position:0 -252px}
+.packers-movers-ul{margin:0}
+.packers-movers-ul li{display:list-item;list-style:none;color:#b6b6b6;line-height:45px}
+.packers-movers-ul li div{display:flex;align-items:center}
+.packers-movers-ul li div span{padding:0 0 0 20px}
+.card{margin-bottom:10px;border:none}
+.card-header{padding:0}
+.card-header h2{font-size:1rem}
+.card-header h2 .btn.btn-link{padding:.75rem 1.25rem;color:#000;width:100%;text-align:left}
+.card-header h2 .btn.btn-link i{float:right;color:#d21812;font-size:24px}
+.card-body{background-color:rgba(0,0,0,.03)}
+.card-body p{margin:0;color:#666}
+.about-p{line-height:27px}
+.guidence-h6{font-size:18px;font-weight:700;padding:0 0 12px}
+.guidence-ul li{display:list-item;list-style:none;padding:0 0 10px 25px;position:relative;font-size:15px}
+.guidence-ul li a{color:#343434}
+.guidence-ul li i{position:absolute;left:0;top:5px;color:#d21812}
+#footer-top{padding:25px 0}
+#footer-top .container{max-width:860px}
+.flex-box{display:flex;align-items:center}
+.flex-box i{color:#d21812}
+.flex-box span{font-weight:700;padding:0 0 0 10px;font-size:21px}
+.footer-top-p{margin:10px 0 0}
+footer{background:url(../images/footer-bg.jpg) 0 0 no-repeat #1b1b1b;padding:40px 0 20px}
+.footer-h5{color:#d21812;font-weight:300}
+.footer-p{color:#999;font-size:13px;line-height:21px;margin:20px 0}
+.footer-group .form-control{background-color:#565f66;font-size:13px;border:none;color:#ccc}
+.footer-group .btn{background-color:#d21812;color:#fff;padding:.25rem 1.5rem}
+.footer-logo{margin:120px 0 0;display:block}
+.sales-mail{color:#fff}
+.social-ul{margin:10px 0 60px}
+.social-ul li{list-style:none;width:45px;height:45px;display:inline-block;text-align:center;margin:0 5px 0 0}
+.social-ul li a{color:#fff;border-radius:50%;display:block;height:45px;line-height:45px}
+.facebook{background-color:#3b5998}
+.twitter{background-color:#3cf}
+.google{background-color:#bd3518}
+.linkedin{background-color:#007bb7}
+.footer-ul{-moz-column-count:4;-moz-column-gap:20px;-webkit-column-count:4;-webkit-column-gap:20px;column-count:4;column-gap:20px;padding:10px 0 0}
+.footer-ul li{list-style:none;line-height:21px}
+.footer-ul li a{color:#999;font-size:13px}
+.footer-bottom-ul{width:100%;padding:15px 0;border-top:1px solid #27292a;display:flex;flex-direction:row;margin:0}
+.footer-bottom-ul li{list-style:none;flex:1 1 auto}
+.footer-bottom-ul li a{color:#ccc;font-size:13px}
+.copyright{width:100%;font-size:13px;color:#666}
+.bottom-to-top{position:fixed;right:20px;bottom:20px;display:none}
+.bottom-to-top a{color:#d21812}
+.mo-hide{display: inline;}
+.mo-show{display: none;}
+@media (min-width: 768px) and (max-width: 1112px) {
+#packers-movers,.packers-movers-right{height:700px}
+.packers-movers-left{max-width:960px;padding:0 15px}
+#packers-movers .width-50{padding-right:1rem}
+.phone,.menu{font-size:16px}
+.top-right{grid-template-columns:67% 28% 5%}
+}
+@media (max-width:767px) {
+.mo-hide{display: none;}
+.mo-show{display: inline;}
+header{background-color:rgba(0,0,0,0.3);padding: 15px;}
+.logo{display: flex;align-items: center;}
+.sidebarCollapse.mo-show{text-align: right;flex-direction: row;color: #fff !important;}
+.logo a{flex: 1;}
+.logo img{max-width: 170px;}
+header, .top-right{grid-template-rows: 1fr;grid-template-columns: none;text-align: left;}
+.top-right{grid-template-columns: 1fr 1fr;}
+.sign-up{grid-column: 1/3;margin: 10px 0;}
+.phone,.menu{font-size:16px}
+.menu{text-align: right;}
+.search i{padding: 0 5px 0 0;}
+.sign-in{padding: 0 0 0 5px;}
+#banner{align-items: end;}
+.banner-h1{font-size:1.75rem;width:60%;background-color:rgba(0,0,0,0.5);padding:15px}
+.client-h3{margin:0 0 20px;font-size:1.35rem}
+#services,#our-blog,#faq,#about,#moving-guidence{padding:30px 0}
+#quote .container{grid-template-columns:none;grid-row-gap:2px}
+#packers-movers{height:auto}
+.packers-movers-left{max-width:100%;padding:0 15px;position:relative}
+#packers-movers .width-50{max-width:100%;padding:25px 0}
+.packers-movers-right{display:none}
+#footer-top .col-md-3{text-align:center}
+.flex-box{justify-content:center}
+.footer-top-p{margin:10px 0 25px}
+.footer-logo{margin:20px 0 0}
+.social-ul{margin:10px 0 20px}
+.footer-h5{font-size:1rem}
+.footer-ul{-moz-column-count:2;-moz-column-gap:10px;-webkit-column-count:2;-webkit-column-gap:10px;column-count:2;column-gap:10px;padding:10px 0 0;width:100%}
+.footer-bottom-ul{display:inline-block;padding:15px}
+.footer-bottom-ul li{display:inline-block;padding:0 10px 0 0}
+}
